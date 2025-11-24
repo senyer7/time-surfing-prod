@@ -1,5 +1,5 @@
 .footer {
-  min-height: 100vh;
+  min-height: auto !important;
   padding: 20px;
   position: relative;
   display: flex;
@@ -171,6 +171,14 @@
   .frame::after {
     height: 25px;
     margin: 10px;
+  }
+
+  .headerTitle,
+  .header__title,
+  .footerTitle,
+  .footer__title {
+    font-size: 4.5rem !important; /* ИЗМЕНЕНО */
+    line-height: 0.85; /* ИЗМЕНЕНО */
   }
 }
 

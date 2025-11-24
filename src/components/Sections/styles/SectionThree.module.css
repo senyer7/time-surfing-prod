@@ -74,10 +74,8 @@
 /* Адаптивность для мобильных */
 @media (max-width: 560px) {
   .questionSectionThree {
-    margin: 0 10px;
-    display: flex;
-    flex-direction: column;
+    display: flex !important; /* ИЗМЕНЕНО */
+    flex-direction: column; /* ИЗМЕНЕНО */
     gap: 20px;
-    padding-bottom: 50px;
   }
 }

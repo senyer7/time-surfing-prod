@@ -140,6 +140,10 @@
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
+  .headerThemeMenuList {
+    gap: 8px; /* ИЗМЕНЕНО */
+  }
+
   .headerText {
     max-width: 355px;
     max-height: 117px;
@@ -155,5 +159,13 @@
 
   .frame::after {
     margin: 10px;
+  }
+
+  .headerTitle,
+  .header__title,
+  .footerTitle,
+  .footer__title {
+    font-size: 4.5rem !important; /* ИЗМЕНЕНО */
+    line-height: 0.85; /* ИЗМЕНЕНО */
   }
 }
