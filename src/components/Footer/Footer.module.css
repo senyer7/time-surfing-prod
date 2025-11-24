@@ -1,0 +1,194 @@
+.footer {
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--footer-bg, transparent);
+}
+
+.footerContent {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.footerText {
+  color: var(--text-color);
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.senyerNet {
+  display: block;
+  margin-top: 15px;
+}
+
+.senyerNetLink {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.senyerNetLink:hover {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.netAccent {
+  color: #2783e9;
+  background: linear-gradient(45deg, #2783e9, #3a9dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(39, 131, 233, 0.3);
+  position: relative;
+}
+
+.senyerNetLink:hover .netAccent {
+  background: linear-gradient(45deg, #3a9dff, #2783e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 8px rgba(39, 131, 233, 0.5);
+}
+
+.senyerNetLink::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2783e9, transparent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.senyerNetLink:hover::after {
+  transform: scaleX(1);
+}
+
+.footerTitle {
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  color: var(--title-color);
+  font-weight: 700;
+  line-height: 82.5%;
+  margin-top: 40px;
+}
+
+.frame::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  border-top: 1px solid var(--btn-color);
+  border-right: 1px solid var(--btn-color);
+  width: 25px;
+  height: 25px;
+  margin: 20px;
+}
+
+.frame::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  border-bottom: 1px solid var(--btn-color);
+  border-left: 1px solid var(--btn-color);
+  width: 25px;
+  height: 25px;
+  margin: 20px;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footerContent {
+    max-width: 600px;
+  }
+
+  .footerText {
+    font-size: calc(var(--font-size) - 1px);
+    margin-bottom: 50px;
+  }
+
+  .footerTitle {
+    font-size: clamp(6rem, 0.5625rem + 12.4531vw, 8.8125rem);
+  }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 560px) {
+  .footer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    min-height: 80vh;
+  }
+
+  .footerContent {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .footerText {
+    font-size: calc(var(--font-size) - 2px);
+    margin-bottom: 40px;
+    line-height: 1.5;
+  }
+
+  .senyerNet {
+    margin-top: 10px;
+  }
+
+  .senyerNetLink {
+    font-size: 1.1em;
+  }
+
+  .footerTitle {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-top: 30px;
+  }
+
+  .frame::before {
+    margin: 10px;
+  }
+
+  .frame::after {
+    height: 25px;
+    margin: 10px;
+  }
+}
+
+/* Особые стили для светлой темы */
+.theme_light .senyerNetLink:hover {
+  color: var(--accent-color);
+}
+
+.theme_light .netAccent {
+  background: linear-gradient(45deg, #2783e9, #1a6bc5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.theme_light .senyerNetLink:hover .netAccent {
+  background: linear-gradient(45deg, #1a6bc5, #2783e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
