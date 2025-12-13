@@ -17,6 +17,12 @@ const Header = () => {
         <ul className={styles.headerThemeMenuList}>
           <li className={styles.headerThemeMenuItem}>
             <button
+              className={`${styles.headerThemeMenuButton}>
+              войти
+            </button>
+          </li>
+          <li className={styles.headerThemeMenuItem}>
+            <button
               className={`${styles.headerThemeMenuButton} ${
                 styles.headerThemeMenuButtonTypeLight
               } ${theme === "light" ? styles.headerThemeMenuButtonActive : ""}`}
