@@ -9,6 +9,12 @@ const Header = () => {
     setTheme(newTheme);
   };
 
+  // Обработчик для кнопки "войти" (можно заменить на нужную логику)
+  const handleLoginClick = () => {
+    console.log("Login clicked");
+    // Здесь можно добавить логику входа
+  };
+
   return (
     <header
       className={`${styles.header} ${styles.decoratedZone} ${styles.frame}`}
@@ -17,7 +23,9 @@ const Header = () => {
         <ul className={styles.headerThemeMenuList}>
           <li className={styles.headerThemeMenuItem}>
             <button
-              className={`${styles.headerThemeMenuButton}>
+              className={styles.headerThemeMenuButton}
+              onClick={handleLoginClick}
+            >
               войти
             </button>
           </li>
