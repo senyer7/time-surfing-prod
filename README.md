@@ -29,7 +29,7 @@
 
 ```bash
 # Клонирование репозитория
-git clone https://github.com/your-username/time-surfing.git
+git clone https://github.com/senyer7/time-surfing-prod.git
 
 # Установка зависимостей
 npm install
